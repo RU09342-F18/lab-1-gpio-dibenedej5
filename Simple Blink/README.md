@@ -1,5 +1,5 @@
 # Simple Blink
-There were 3 registers on both boards who's values needed to be altered in order for simple blink to be functional. Boards MSP430G2553 and MSP430F5529.
+There were 3 registers on both boards whose values needed to be altered in order for simple blink to be functional. Boards MSP430G2553 and MSP430F5529.
 
 # MSP430G2553
 Technically on this board there were 4 registers that needed to be changed in order for simple blink to work. These were P1SEL, P1SEL2, P1DIR, and P1OUT. By setting the values of the 1.0 bits in the select registers to 0s, it enables pin 1.0 to be used for I/O purposes. Setting the P1.0's direction register to 0 makes it so this pin is an output. This information was determined by looking at the pin schematic diagram in this microcontrollers datasheet. P1OUT is used in an xor statement in a while loop so the state of the LED toggles, depending on the delay cycles which in this case was set to 100000.
